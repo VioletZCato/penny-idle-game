@@ -1,0 +1,36 @@
+Let's make a game!
+    name:Penny's Idle Game
+    by:Violet Z Cato
+    desc:An idle game about pennies for Penny
+    created:26/12/2020
+    version:1.0
+Settings
+    background:https://cdn.pixabay.com/photo/2017/09/11/20/45/money-2740408_960_720.jpg
+  //background:https://cdn.pixabay.com/photo/2015/08/29/02/06/coins-912716_960_720.jpg
+  //background:https://cdn.pixabay.com/photo/2012/02/23/08/40/pennies-15727_960_720.jpg
+    building cost increase:110%
+    building cost refund:100%
+  //spritesheet:
+  //stylesheet:
+Buttons:
+    *pennyButton
+        name:Penny Button
+        desc:Click to gain pennies
+        on click:anim icon wobble
+        on click:yield 1 penny
+        icon:https://webstockreview.net/images250_/dime-clipart-transparent-15.png
+        class:bigButton hasFlares
+Resources
+    *penny|pennies
+        name:Penny|Pennies
+        desc:Most basic and important resource of the game.  Get as many as you can!
+        icon:https://webstockreview.net/images250_/dime-clipart-transparent-15.png
+        show earned
+Buildings
+    *street|streets
+        name:Street|Streets
+        desc:A street! Oh look, someone dropped a penny...<//><b>Effect:</b><.>Produces 1 penny every 5 seconds.
+        icon:https://cdn.pixabay.com/photo/2014/07/14/21/53/cobblestones-393455_960_720.jpg
+        cost:20 pennies
+        on tick:yield 0.2 penny
+        unlocked
